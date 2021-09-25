@@ -1,12 +1,149 @@
-.circle_in_orange{
 
-    width:80px;height:80px; //正圓形，所以寬與高都設一樣
-    
-    border-radius:999em;
-    
+
+.circle_in_orange{
+    position: relative;
+    width:80px;
+    height:80px; //正圓形，所以寬與高都設一樣
+    border-radius:50%;
     background-color:#FFD366;
-    
+    color: #424242;
+    border-style: none;
+    font-weight: bold;
     }
+
+/* 過輕 */
+.changeColor-ideal{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #424242;
+    border: 3px #31BAF9 solid;
+    color:#31BAF9;
+    font-weight:bold;
+    }
+
+.inside-ideal{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: #31BAF9;
+    border-radius: 50%;
+    border: 3px #31BAF9 solid;
+}
+
+/* 理想 */
+
+.changeColor-Too_light{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #424242;
+    border: 3px #86D73F solid;
+    color:#86D73F;
+    font-weight:bold;
+    }
+
+.inside-Too_light{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: #86D73F;
+    border-radius: 50%;
+    border: 3px #86D73F solid;
+}
+
+/* 過重 */
+
+.changeColor-Overweight{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #424242;
+    border: 3px #FF982D solid;
+    color:#FF982D;
+    font-weight:bold;
+    }
+
+.inside-Overweight{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: #FF982D;
+    border-radius: 50%;
+    border: 3px #FF982D solid;
+}
+
+/* 輕度肥胖 */
+
+.changeColor-Mild_obesity{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #424242;
+    border: 3px #FF6C03 solid;
+    color:#FF6C03;
+    font-weight:bold;
+    }
+
+.inside-Mild_obesity{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: #FF6C03;
+    border-radius: 50%;
+    border: 3px #FF6C03 solid;
+}
+
+/* 中度肥胖 */
+
+.changeColor-Moderate_obesity{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #424242;
+    border: 3px #FF6C03 solid;
+    color:#FF6C03;
+    font-weight:bold;
+    }
+
+.inside-Moderate_obesity{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: #FF6C03;
+    border-radius: 50%;
+    border: 3px #FF6C03 solid;
+}
+
+/* 重度肥胖 */
+
+.changeColor-Severe_obesity{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #424242;
+    border: 3px #FF1200 solid;
+    color:#FF1200;
+    font-weight:bold;
+    }
+
+.inside-Severe_obesity{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: #FF1200;
+    border-radius: 50%;
+    border: 3px #FF1200 solid;
+}
+
+
+
 .MJ{
     font-family: Microsoft JhengHei;
 }

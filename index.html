@@ -25,12 +25,11 @@
                             <br>
                             <input type="text" class="weight input text-white border border-orange rounded-3 bg-iron fs-6 MJ" placeholder="請輸入體重">
                         </div>
-                        <div class="col-6 d-flex align-items-center justify-content-center">
-                            
-                                <button class="send circle_in_orange border-0">
-                                    <a href="#" class="text-decoration-none text-iron fw-bold">看結果</a>
+                        <div class="col-6 d-flex justify-content-center align-items-center ">
+                                <button class="send circle_in_orange fw-bold">
+                                    看結果
+                                    <a href="href=javascript:window.location.reload()"><img src="https://i.ibb.co/RTjyZCB/icons-loop.png" class="icon-return visually-hidden"></a>
                                 </button>
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -42,28 +41,13 @@
             <div class="row">
                 <div class="col-12 border border-orange">
                     <p class="text-center fs-3 pt-3">BMI紀錄</p>
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th>狀態</th>
-                                <th>BMI</th>
-                                <th>weight</th>
-                                <th>height</th>
-                                <th>建立日期</th>
-                            </tr>
-                            
-                            <tbody class="list">
-                                <tr>
-                                  <th scope="row">理想</th>
-                                  <td>25</td>
-                                  <td>170</td>
-                                  <td>75</td>
-                                  <td>2021-09-24</td>
-                                </tr>
-                            </tbody>
-                            
-                        </thead>
-                    </table>
+                    <ul class="list-group d-flex border-0 border-orange py-3 flex-column justify-content-between list">
+                        <li class="list-group-item  border-0 border-start border-ideal border-5">state</li>
+                        <li class="list-group-item border-0">BMI</li>
+                        <li class="list-group-item border-0">weight</li>
+                        <li class="list-group-item border-0">height</li>
+                        <li class="list-group-item border-0">建立日期</li>
+                    </ul>
                 </div>
             </div>
         </div>
