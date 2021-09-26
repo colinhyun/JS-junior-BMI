@@ -142,7 +142,10 @@
     border: 3px #FF1200 solid;
 }
 
-
+/* 改 */
+.list-group-item:first-child {
+    border-top-left-radius: unset;
+}
 
 .MJ{
     font-family: Microsoft JhengHei;
