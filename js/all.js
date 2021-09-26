@@ -95,7 +95,7 @@ function calculate(e) {
         localStorage.setItem('listData', JSON.stringify(data));
 
         //取完值後清除欄位
-        clear();
+        //clear();
     } else {
         alert('不是有效的數字');
         window.location.reload();
