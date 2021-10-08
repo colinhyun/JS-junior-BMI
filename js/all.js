@@ -6,6 +6,9 @@ var list = document.querySelector('.list');
 // 監聽button
 send.addEventListener('click', calculate);
 
+// 監聽l
+list.addEventListener('click',toggleDone);
+
 //更新資料並顯示在畫面上
 updataList(data);
 
@@ -22,7 +25,7 @@ function calculate(e) {
     } else {
         // 判斷 input 裡的值是不是有效的數字
         if ((isnumber(height)) && (isnumber(weight))) {
-            alert('是有效的數字');
+            //alert('是有效的數字');
             var heightCm = height / 100;
             var dt = new Date();
             var btYearMonthDay = dt.getDate() + '-' + (dt.getMonth() + 1) + '-' + dt.getFullYear()
@@ -33,12 +36,12 @@ function calculate(e) {
 
             if (BMI < 18.5) {
                 state = '過輕';
-                stateColor = 'ideal';
-                send.setAttribute('class', 'changeColor-ideal');
-            } else if (BMI > 18.5 && BMI <= 25) {
-                state = '理想';
                 stateColor = 'Too_light';
                 send.setAttribute('class', 'changeColor-Too_light');
+            } else if (BMI > 18.5 && BMI <= 25) {
+                state = '理想';
+                stateColor = 'ideal';
+                send.setAttribute('class', 'changeColor-ideal');
             } else if (BMI > 25 && BMI <= 30) {
                 state = '過重';
                 stateColor = 'Overweight';
@@ -70,7 +73,7 @@ function calculate(e) {
                 weight: weight,
                 height: height,
                 buildDate: btYearMonthDay,
-                stateColor: stateColor
+                stateColor: stateColor,
             }
             data.push(todo);
             updataList(data);
@@ -91,15 +94,32 @@ function updataList(items) {
     var str = '';
     var len = items.length;
     for (var i = 0; i < len; i++) {
-        str += `<ul class="list-group border-0 border-orange py-3 d-flex flex-row justify-content-between list">
-                    <li class="list-group-item border-0 border-start border-${items[i].stateColor} border-5">${items[i].state}</li>
-                    <li class="list-group-item border-0"><span>BMI</span> ${items[i].BMI}</li>
+        str +=`
+                <ul class="list-group d-flex flex-row border-0 border-orange py-3 justify-content-between list" >
+                    <li class="list-group-item  border-0 border-start border-${items[i].stateColor} border-5">${items[i].state}</li>
+                    <li class="list-group-item border-0"><span>BMI</span>${items[i].BMI}</li>
                     <li class="list-group-item border-0"><span class="fs-6">weight </span>${items[i].weight} kg</li>
                     <li class="list-group-item border-0"><span>height</span> ${items[i].height} cm</li>
                     <li class="list-group-item border-0">${items[i].buildDate}</li>
-                </ul>`
+                    <a href="#" class="delete d-flex align-items-center" data-index='`+ i +`'>刪除</a>
+                </ul>
+        `
     }
     list.innerHTML = str;
+}
+
+
+// 監聽刪除
+function toggleDone(e) {
+    e.preventDefault();  
+    if (e.target.nodeName !== 'A') {
+        return
+    }
+    var index = e.target.dataset.index;
+    //console.log(index);
+    data.splice(index,1);
+    localStorage.setItem('listData',JSON.stringify(data));
+    updataList(data);
 }
 
 /* 清除欄位 */

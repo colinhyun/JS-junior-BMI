@@ -12,7 +12,7 @@
     }
 
 /* 過輕 */
-.changeColor-ideal{
+.changeColor-Too_light{
     position: relative;
     width: 80px;
     height: 80px;
@@ -23,7 +23,7 @@
     font-weight:bold;
     }
 
-.inside-ideal{
+.inside-Too_light{
     position: absolute;
     right: 0;
     bottom: 0;
@@ -34,7 +34,7 @@
 
 /* 理想 */
 
-.changeColor-Too_light{
+.changeColor-ideal{
     position: relative;
     width: 80px;
     height: 80px;
@@ -45,7 +45,7 @@
     font-weight:bold;
     }
 
-.inside-Too_light{
+.inside-ideal{
     position: absolute;
     right: 0;
     bottom: 0;
